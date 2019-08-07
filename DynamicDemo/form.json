@@ -1,0 +1,46 @@
+{
+    "actions": [
+        {
+            "type": "ProgressBar",
+            "name": "MyProgress"
+        },
+        {
+            "type": "Button",
+            "name": "ReloadButton",
+            "caption": "Reload",
+            "onClick": "DD_ReloadConfigurationForm($id);"
+        },
+        {
+            "type": "CheckBox",
+            "name": "AutoUpdate",
+            "caption": "Enable Update",
+            "onChange": "DD_SetAutoUpdate($id, $AutoUpdate);"
+        },
+        {
+            "type": "HorizontalSlider",
+            "name": "ProgressSlider",
+            "minimum": 0,
+            "maximum": 100,
+            "onChange": "DD_SetProgress($id, $ProgressSlider);"
+        },
+        {
+            "type": "Button",
+            "caption": "Open Popup",
+            "onClick": "DD_OpenPopup($id);"
+        },
+        {
+            "type": "PopupAlert",
+            "name": "MyPopup",
+            "visible": false,
+            "popup": {
+                "caption": "My Popup",
+                "items": [
+                    {
+                        "type": "Label",
+                        "caption": "Hello World!"
+                    }
+                ]
+            }
+        }
+    ]
+}
