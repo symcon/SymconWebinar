@@ -10,7 +10,7 @@ class RechenmodulWebinar extends IPSModule
 
         //These lines are parsed on Symcon Startup or Instance creation
         //You cannot use variables here. Just static values.
-        $this->RegisterPropertyInteger('Calculation', 0);
+        $this->RegisterPropertyInteger('Calculation', 1);
         $this->RegisterPropertyString('Variables', '[]');
     }
 
@@ -123,8 +123,6 @@ class RechenmodulWebinar extends IPSModule
             }
         }
 
-        $average /= sizeof($variables);
-
         if ((($this->ReadPropertyInteger('Calculation') == 0) || ($this->ReadPropertyInteger('Calculation') == 1)) && (@$this->GetIDForIdent('Sum') != false)) {
             SetValue($this->GetIDForIdent('Sum'), $sum);
         }
@@ -138,6 +136,7 @@ class RechenmodulWebinar extends IPSModule
         }
 
         if ((($this->ReadPropertyInteger('Calculation') == 0) || ($this->ReadPropertyInteger('Calculation') == 4)) && (@$this->GetIDForIdent('Average') != false)) {
+            $average /= sizeof($variables);
             SetValue($this->GetIDForIdent('Average'), $average);
         }
 
