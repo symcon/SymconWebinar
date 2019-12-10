@@ -1,0 +1,15 @@
+{
+    "id": "{BCA877CA-06FD-2212-D0B1-766C8D099E9D}",
+    "name": "RechenmodulWebinar",
+    "type": 3,
+    "vendor": "",
+    "aliases": 
+    [
+        "Rechen-Modul (Webinar)"
+    ],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "RM",
+    "url": "https://github.com/symcon/Rechenmodule/tree/master/Rechenmodul"
+}
