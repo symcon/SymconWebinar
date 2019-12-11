@@ -110,8 +110,10 @@ class RechenmodulWebinar extends IPSModule
     {
         $sum = 0;
         $average = 0;
-        $minimum = 0;
-        $maximum = 0;
+        //$minimum = 0;
+        //$maximum = 0;
+        $minimum = PHP_INT_MAX;
+        $maximum = PHP_INT_MIN;
         $count = 0;
 
         $variables = json_decode($this->ReadPropertyString('Variables'));
@@ -119,7 +121,8 @@ class RechenmodulWebinar extends IPSModule
         foreach ($variables as $variable) {
             if (IPS_VariableExists($variable->ID)) {
                 $count++;
-                $value = 24;
+                //$value = 24;
+                $value = GetValue($variable->ID);
                 $sum += $value;
                 $average += $value;
                 if ($value < $minimum) {
@@ -144,7 +147,9 @@ class RechenmodulWebinar extends IPSModule
         }
 
         if ((($this->ReadPropertyInteger('Calculation') == 0) || ($this->ReadPropertyInteger('Calculation') == 4)) && (@$this->GetIDForIdent('Average') != false)) {
-            $average /= sizeof($variables);
+            if ($count > 0) {
+                $average /= $count;
+            }
             SetValue($this->GetIDForIdent('Average'), $average);
         }
 
