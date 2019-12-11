@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
@@ -21,7 +22,8 @@ class RechenModulTest extends TestCase
         parent::setUp();
     }
 
-    public function testBasicSum() {
+    public function testBasicSum()
+    {
         $var1 = 3;
         $var2 = 4;
         $var3 = 5;
@@ -30,7 +32,8 @@ class RechenModulTest extends TestCase
         $this->assertEquals(12, $sum);
     }
 
-    public function testSum() {
+    public function testSum()
+    {
         $variable1ID = IPS_CreateVariable(1);
         $variable2ID = IPS_CreateVariable(1);
         $variable3ID = IPS_CreateVariable(1);
@@ -61,7 +64,8 @@ class RechenModulTest extends TestCase
         $this->assertEquals(12, GetValue($sumVariableID));
     }
 
-    public function testAverage() {
+    public function testAverage()
+    {
         $variable1ID = IPS_CreateVariable(1);
         $variable2ID = IPS_CreateVariable(1);
         $variable3ID = IPS_CreateVariable(1);
@@ -92,7 +96,8 @@ class RechenModulTest extends TestCase
         $this->assertEquals(4, GetValue($averageVariableID));
     }
 
-    public function testAverageNoVariables() {
+    public function testAverageNoVariables()
+    {
         $rechenModulID = IPS_CreateInstance($this->rechenModulID);
 
         IPS_SetProperty($rechenModulID, 'Calculation', 4); // Average
@@ -103,7 +108,8 @@ class RechenModulTest extends TestCase
         $this->assertEquals(0, GetValue($averageVariableID));
     }
 
-    public function testAverageNonVariable() {
+    public function testAverageNonVariable()
+    {
         $variable1ID = IPS_CreateVariable(1);
         $variable2ID = IPS_CreateVariable(1);
         $scriptID = IPS_CreateScript(0);
@@ -133,7 +139,8 @@ class RechenModulTest extends TestCase
         $this->assertEquals(3.5, GetValue($averageVariableID));
     }
 
-    public function testMinimum() {
+    public function testMinimum()
+    {
         $variable1ID = IPS_CreateVariable(1);
         $variable2ID = IPS_CreateVariable(1);
         $variable3ID = IPS_CreateVariable(1);
