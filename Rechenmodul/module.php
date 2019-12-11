@@ -1,6 +1,5 @@
-<?php
+<?
 
-declare(strict_types=1);
 class RechenmodulWebinar extends IPSModule
 {
     public function Create()
@@ -27,16 +26,25 @@ class RechenmodulWebinar extends IPSModule
 
         switch ($this->ReadPropertyInteger('Calculation')) {
             case 0: // Everything
-                $this->RegisterVariableFloat('Sum', $this->Translate('Sum'));
-                $this->RegisterVariableFloat('Minimum', $this->Translate('Minimum'));
-                $this->RegisterVariableFloat('Maximum', $this->Translate('Maximum'));
-                $this->RegisterVariableFloat('Average', $this->Translate('Average'));
-                $this->RegisterVariableFloat('Count', $this->Translate('Count'));
+                $this->RegisterVariableFloat(                'Sum',                $this->Translate('Sum'));                        
+                $this->RegisterVariableFloat('Minimum', $this->Translate('Minimum'));         
+                $this->RegisterVariableFloat('Maximum',                   $this->Translate('Maximum'));             
+                                  $this->RegisterVariableFloat('Average', $this->Translate('Average'));
+                $this->RegisterVariableFloat('Count',           $this->Translate('Count'));                
                 break;
 
             case 1: // Sum
+
+
+
                 $this->RegisterVariableFloat('Sum', $this->Translate('Sum'));
+
+
+
                 break;
+
+
+
 
             case 2: // Minimum
                 $this->RegisterVariableFloat('Minimum', $this->Translate('Minimum'));
@@ -59,11 +67,11 @@ class RechenmodulWebinar extends IPSModule
         $childrenIDs = IPS_GetChildrenIDs($this->InstanceID);
 
         foreach ($childrenIDs as $id) {
-            if (IPS_GetObject($id)['ObjectType'] == 4) {
-                if (IPS_GetEvent($id)['EventScript'] == "RM_Update(\$_IPS['TARGET']);") {
-                    IPS_DeleteEvent($id);
-                }
-            }
+        if (IPS_GetObject($id)['ObjectType'] == 4) {
+        if (IPS_GetEvent($id)['EventScript'] == "RM_Update(\$_IPS['TARGET']);") {
+        IPS_DeleteEvent($id);
+        }
+        }
         }
 
         // Create new elements for all variables
