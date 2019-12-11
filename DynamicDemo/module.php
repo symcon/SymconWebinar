@@ -1,7 +1,8 @@
-<?
-class DynamicDemo extends IPSModule {
-    
-    public function Create(){
+<?php
+class DynamicDemo extends IPSModule
+{
+    public function Create()
+    {
         //Never delete this line!
         parent::Create();
     
@@ -11,19 +12,20 @@ class DynamicDemo extends IPSModule {
         $this->RegisterTimer("ProgressTimer", 100, "DD_ProgressUp(" . $this->InstanceID . ");");
     }
 
-    public function Destroy(){
+    public function Destroy()
+    {
         //Never delete this line!
         parent::Destroy();
-        
     }
 
-    public function ApplyChanges(){
+    public function ApplyChanges()
+    {
         //Never delete this line!
         parent::ApplyChanges();
-
     }
 
-    public function GetConfigurationForm() {
+    public function GetConfigurationForm()
+    {
         $jsonForm = json_decode(file_get_contents(__DIR__ . "/form.json"), true);
 
         $jsonForm["actions"][0]["current"] = $this->ReadAttributeInteger("Progress");
@@ -34,7 +36,8 @@ class DynamicDemo extends IPSModule {
         return json_encode($jsonForm);
     }
 
-    public function ProgressUp() {
+    public function ProgressUp()
+    {
         $progress = $this->ReadAttributeInteger("Progress");
         $progress = ($progress + 1) % 100;
         $this->WriteAttributeInteger("Progress", $progress);
@@ -43,26 +46,27 @@ class DynamicDemo extends IPSModule {
         }
     }
 
-    public function ReloadConfigurationForm() {
+    public function ReloadConfigurationForm()
+    {
         $this->ReloadForm();
     }
 
-    public function SetAutoUpdate($AutoUpdate) {
+    public function SetAutoUpdate($AutoUpdate)
+    {
         $this->WriteAttributeBoolean("AutoUpdate", $AutoUpdate);
         $this->UpdateFormField("ReloadButton", "enabled", !$AutoUpdate);
     }
 
-    public function SetProgress($Progress) {
+    public function SetProgress($Progress)
+    {
         $this->WriteAttributeInteger("Progress", $Progress);
         if ($this->ReadAttributeBoolean("AutoUpdate")) {
             $this->UpdateFormField("MyProgress", "current", $Progress);
         }
-
     }
 
-    public function OpenPopup() {
+    public function OpenPopup()
+    {
         $this->UpdateFormField("MyPopup", "visible", true);
     }
 }
-
-?>
