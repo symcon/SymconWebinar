@@ -1,0 +1,11 @@
+{
+    "id": "{23A5CFBE-B692-F24F-C54B-2B537A38AF38}",
+    "name": "FormDemo",
+    "type": 3,
+    "vendor": "",
+    "aliases": ["Form Demo"],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "FD"
+}
