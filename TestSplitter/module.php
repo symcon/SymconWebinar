@@ -9,6 +9,7 @@ declare(strict_types=1);
 			parent::Create();
 
 			$this->ConnectParent('{6179ED6A-FC31-413C-BB8E-1204150CF376}');
+			$this->RegisterPropertyString('Address', '');
 		}
 
 		public function Destroy()

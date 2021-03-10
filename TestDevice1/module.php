@@ -9,7 +9,7 @@ declare(strict_types=1);
             parent::Create();
 
             $this->RegisterPropertyInteger("DeviceID", 0);
-            $this->RegisterDeviceType("SecondaryID", 0);
+            $this->RegisterPropertyInteger("SecondaryID", 0);
         }
 
         public function Destroy()
