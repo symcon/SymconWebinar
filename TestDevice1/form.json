@@ -1,0 +1,16 @@
+{
+    "elements": [
+        {
+            "type": "NumberSpinner",
+            "name": "DeviceID",
+            "caption": "DeviceID"
+        },
+        {
+            "type": "NumberSpinner",
+            "name": "SecondaryID",
+            "caption": "SecondaryID"
+        }
+    ],
+    "actions": [],
+    "status": []
+}

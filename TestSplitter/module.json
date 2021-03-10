@@ -1,0 +1,19 @@
+{
+    "id": "{63D1D28F-6901-8BB7-8C8E-1046022EFEB4}",
+    "name": "TestSplitter",
+    "type": 2,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [
+        "{79827379-F36E-4ADA-8A95-5F8D1DC92FA9}"
+    ],
+    "childRequirements": [
+        "{9209FA1D-DF9B-B139-432F-F4D4440D8531}"
+    ],
+    "implemented": [
+        "{9A6F045B-B0D5-6260-A801-DEAEF2299FD6}",
+        "{018EF6B5-AB94-40C6-AA53-46943E824ACF}"
+    ],
+    "prefix": "TS",
+    "url": ""
+}
