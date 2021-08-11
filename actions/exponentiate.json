@@ -1,0 +1,22 @@
+{
+    "id": "{EAABF624-4E62-FECA-5CC6-059B994F2E02}",
+    "caption": "Exponentiate",
+    "form": [
+        {
+            "type": "NumberSpinner",
+            "name": "EXPONENT",
+            "caption": "Exponent"
+        }
+    ],
+    "action": "SetValue($_IPS['TARGET'], pow(GetValue($_IPS['TARGET']), $_IPS['EXPONENT']));",
+    "restrictions": {
+        "objectType": [ 2 ],
+        "variableType": [ 1, 2 ],
+        "profilesExclude": [ "~HexColor", "~UnixTimestamp", "~UnixTimestampDate", "~UnixTimestampTime" ],
+        "profileIsEnum": false,
+        "profileIsPercentage": false,
+        "writable": true
+    },
+    "format": "Exponentiate with {EXPONENT, number}",
+    "category": "math"
+}

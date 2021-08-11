@@ -1,0 +1,20 @@
+{
+    "id": "{853D8D75-E5A8-4BBD-3E99-51342A482073}",
+    "caption": "Limit Event",
+    "form": [
+        {
+            "type": "NumberSpinner",
+            "name": "LIMIT",
+            "caption": "Executions"
+        }
+    ],
+    "action": [
+        "IPS_SetEventActive($_IPS['TARGET'], true);",
+        "IPS_SetEventLimit($_IPS['TARGET'], $_IPS['LIMIT']);"
+    ],
+    "restrictions": {
+        "objectType": [ 4 ]
+    },
+    "format": "Activate and execute {LIMIT, number} times",
+    "category": "other"
+}
