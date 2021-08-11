@@ -1,0 +1,12 @@
+{
+    "id": "{D6336DBD-6BB3-ABD6-9131-A4CC7B3C5719}",
+    "name": "TestDevice1",
+    "type": 3,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "TD",
+    "url": ""
+}

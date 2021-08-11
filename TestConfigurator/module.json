@@ -1,0 +1,16 @@
+{
+    "id": "{2CAA76B0-5332-BA1C-63D9-47E3413C4D26}",
+    "name": "TestConfigurator",
+    "type": 4,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [
+        "{9A6F045B-B0D5-6260-A801-DEAEF2299FD6}"
+    ],
+    "childRequirements": [],
+    "implemented": [
+        "{9209FA1D-DF9B-B139-432F-F4D4440D8531}"
+    ],
+    "prefix": "TC",
+    "url": ""
+}

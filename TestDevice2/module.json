@@ -1,0 +1,16 @@
+{
+    "id": "{241A3623-28BD-33AB-5D05-29F8C28EADB6}",
+    "name": "TestDevice2",
+    "type": 3,
+    "vendor": "",
+    "aliases": [],
+    "parentRequirements": [
+        "{9A6F045B-B0D5-6260-A801-DEAEF2299FD6}"
+    ],
+    "childRequirements": [],
+    "implemented": [
+        "{9209FA1D-DF9B-B139-432F-F4D4440D8531}"
+    ],
+    "prefix": "TD",
+    "url": ""
+}
