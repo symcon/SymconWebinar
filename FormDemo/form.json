@@ -1,0 +1,123 @@
+{
+    "elements": [
+        {
+            "type": "CheckBox",
+            "caption": "Dies ist eine CheckBox",
+            "name": "Test",
+            "width": "150px",
+            "onChange": "var_dump($Test);"
+        },
+        {
+            "type": "NumberSpinner",
+            "caption": "Dies ist eine Zahl",
+            "digits": 2,
+            "minimum": 1,
+            "maximum": 55,
+            "suffix": "Sekunden"
+        },
+        {
+            "type": "ValidationTextBox",
+            "caption": "TextBox",
+            "multiline": true,
+            "validate": "^[a-zA-Z]*$"
+        },
+        {
+            "type": "SelectObject",
+            "caption": "Objektauswahl"
+        },
+        {
+            "type": "SelectModule",
+            "caption": "Form Demo",
+            "moduleID": "{23A5CFBE-B692-F24F-C54B-2B537A38AF38}"
+        },
+        {
+            "type": "Label",
+            "caption": "Ich bin ein Label!"
+        },
+        {
+            "type": "Image",
+            "image": "data:image/png;base64, iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",
+            "center": true
+        },
+        {
+            "type": "RowLayout",
+            "items": [
+                {
+                    "type": "Button",
+                    "caption": "Button",
+                    "onClick": "echo 'Frohe Weihnachten';"
+                },
+                {
+                    "type": "Select",
+                    "caption": "Auswahl",
+                    "options": [
+                        {
+                            "value": 5,
+                            "caption": "Meine Option"
+                        },
+                        {
+                            "value": 10,
+                            "caption": "Deine Option"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ExpansionPanel",
+            "caption": "Panel",
+            "items": [
+                {
+                    "type": "Label",
+                    "caption": "Hallo!"
+                }
+            ]
+        },
+        {
+            "type": "PopupButton",
+            "caption": "Open Popup",
+            "popup": {
+                "caption": "My Element Popup",
+                "items": [
+                    {
+                        "type": "SelectVariable",
+                        "name": "VariableTest",
+                        "caption": "Some Variable"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "List",
+            "rowCount": 5,
+            "add": true,
+            "columns": [
+                {
+                    "caption": "Spalte 1",
+                    "name": "column1",
+                    "width": "auto",
+                    "add": "Neuer Wert",
+                    "edit": {
+                        "type": "ValidationTextBox"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "List",
+            "rowCount": 20,
+            "columns": [
+                {
+                    "caption": "Spalte 1",
+                    "name": "column1",
+                    "width": "auto"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "type": "TestCenter"
+        }
+    ]
+}
