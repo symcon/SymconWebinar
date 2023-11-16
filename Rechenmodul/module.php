@@ -31,7 +31,7 @@ class RechenmodulWebinar extends IPSModule
                 $this->RegisterVariableFloat('Sum', $this->Translate('Sum'));
                 $this->RegisterVariableFloat('Minimum', $this->Translate('Minimum'));
                 $this->RegisterVariableFloat('Maximum', $this->Translate('Maximum'));
-                                  $this->RegisterVariableFloat('Average', $this->Translate('Average'));
+                $this->RegisterVariableFloat('Average', $this->Translate('Average'));
                 $this->RegisterVariableFloat('Count', $this->Translate('Count'));
                 break;
 

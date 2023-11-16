@@ -1,23 +1,23 @@
 <?php
 
 declare(strict_types=1);
-    class TestConfigurator extends IPSModule
+class TestConfigurator extends IPSModule
+{
+    public function Create()
     {
-        public function Create()
-        {
-            //Never delete this line!
-            parent::Create();
-        }
-
-        public function Destroy()
-        {
-            //Never delete this line!
-            parent::Destroy();
-        }
-
-        public function ApplyChanges()
-        {
-            //Never delete this line!
-            parent::ApplyChanges();
-        }
+        //Never delete this line!
+        parent::Create();
     }
+
+    public function Destroy()
+    {
+        //Never delete this line!
+        parent::Destroy();
+    }
+
+    public function ApplyChanges()
+    {
+        //Never delete this line!
+        parent::ApplyChanges();
+    }
+}
