@@ -3,7 +3,9 @@
     "name": "FormDemo",
     "type": 3,
     "vendor": "",
-    "aliases": ["Form Demo"],
+    "aliases": [
+        "Form Demo"
+    ],
     "parentRequirements": [],
     "childRequirements": [],
     "implemented": [],

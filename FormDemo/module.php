@@ -8,7 +8,7 @@ class FormDemo extends IPSModule
         //Never delete this line!
         parent::Create();
 
-        $this->RegisterPropertyBoolean("Test", false);
+        $this->RegisterPropertyBoolean('Test', false);
     }
 
     public function Destroy()

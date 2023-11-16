@@ -10,9 +10,19 @@
     ],
     "action": "SetValue($_IPS['TARGET'], pow(GetValue($_IPS['TARGET']), $_IPS['EXPONENT']));",
     "restrictions": {
-        "objectType": [ 2 ],
-        "variableType": [ 1, 2 ],
-        "profilesExclude": [ "~HexColor", "~UnixTimestamp", "~UnixTimestampDate", "~UnixTimestampTime" ],
+        "objectType": [
+            2
+        ],
+        "variableType": [
+            1,
+            2
+        ],
+        "profilesExclude": [
+            "~HexColor",
+            "~UnixTimestamp",
+            "~UnixTimestampDate",
+            "~UnixTimestampTime"
+        ],
         "profileIsEnum": false,
         "profileIsPercentage": false,
         "writable": true

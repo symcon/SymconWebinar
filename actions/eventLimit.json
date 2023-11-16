@@ -13,7 +13,9 @@
         "IPS_SetEventLimit($_IPS['TARGET'], $_IPS['LIMIT']);"
     ],
     "restrictions": {
-        "objectType": [ 4 ]
+        "objectType": [
+            4
+        ]
     },
     "format": "Activate and execute {LIMIT, number} times",
     "category": "other"
